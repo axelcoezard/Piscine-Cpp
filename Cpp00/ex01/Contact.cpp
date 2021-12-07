@@ -29,4 +29,15 @@ void	Contact::set_phone_number(std::string phone_number)
 void	Contact::set_darkest_secret(std::string darkest_secret)
 { this->_darkest_secret = darkest_secret; }
 
+std::ostream&	operator<<(std::ostream& stream, const Contact& contact)
+{
+	std::cout << "firstname=" << contact->_firstname << std::endl;
+	std::cout << "lastname=" << contact->_lastname << std::endl;
+	std::cout << "nickname=" << contact->_nickname << std::endl;
+	std::cout << "phone_number=" << contact->_phone_number << std::endl;
+	std::cout << "darkest_secret=" << contact->_darkest_secret << std::endl;
+
+	return (stream);
+}
+
 Contact::~Contact(void) { }

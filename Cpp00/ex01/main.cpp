@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 13:54:21 by acoezard          #+#    #+#             */
-/*   Updated: 2021/11/30 18:08:37 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/12/07 16:20:41 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static void _begin(void)
 	std::cout << "        BIENVENUE SUR LE PHONEBOOK        "	<< std::endl;
 	std::cout 													<< std::endl;
 	std::cout << "                Commandes:                "	<< std::endl;
-	std::cout << "            ADD | SEARCH | END            "	<< std::endl;
+	std::cout << "            ADD | SEARCH | EXIT           "	<< std::endl;
 	std::cout << "=========================================="	<< std::endl;
 }
 
@@ -32,7 +32,6 @@ static void	_add(Phonebook *phonebook)
 	Contact		*contact;
 
 	contact = new Contact();
-	std::cout << "phonebook: Remplir les informations suivantes"	<< std::endl;
 	std::cout << "phonebook: firstname=";
 	std::getline(std::cin, entry);
 	contact->set_firstname(entry);
@@ -42,12 +41,27 @@ static void	_add(Phonebook *phonebook)
 	std::cout << "phonebook: nickname=";
 	std::getline(std::cin, entry);
 	contact->set_nickname(entry);
+	std::cout << "phonebook: phone_number=";
+	std::getline(std::cin, entry);
+	contact->set_phone_number(entry);
+	std::cout << "phonebook: darkest_secret=";
+	std::getline(std::cin, entry);
+	contact->set_darkest_secret(entry);
 	*phonebook += contact;
 }
 
 static void _search(Phonebook *phonebook)
 {
-	(void) phonebook;
+	std::string	entry;
+	std::cout << "phonebook: id=";
+
+	int	id = 0;
+	while (id < 1 || id > 8)
+	{
+		std::getline(std::cin, entry);
+		id = atoi(entry.c_str());
+	}
+	std::cout << phonebook[id -1];
 }
 
 int	main(void)

@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 14:42:00 by acoezard          #+#    #+#             */
-/*   Updated: 2021/11/30 17:37:14 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/12/07 16:06:46 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,5 @@ Contact *Phonebook::operator[](int index)
 
 Phonebook::~Phonebook(void)
 {
-	// TODO: Delete all created contacts
+	delete [] this->_contacts;
 }
