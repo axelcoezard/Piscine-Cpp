@@ -5,5 +5,7 @@
 *.o
 
 megaphone
+phonebook
+account
 
 bin/
