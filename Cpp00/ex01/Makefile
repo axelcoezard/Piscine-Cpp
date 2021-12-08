@@ -6,14 +6,14 @@
 #    By: acoezard <acoezard@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/30 13:03:10 by acoezard          #+#    #+#              #
-#    Updated: 2021/11/30 18:07:46 by acoezard         ###   ########.fr        #
+#    Updated: 2021/12/08 20:12:28 by acoezard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME			:=	phonebook
 
-SOURCES			:=	./
-INCLUDES		:=	./
+SOURCES			:=	./sources
+INCLUDES		:=	./includes
 OBJECTS			:=	./bin
 
 SRCS			:=	main.cpp \
