@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 14:41:57 by acoezard          #+#    #+#             */
-/*   Updated: 2021/12/08 15:46:45 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/12/08 15:58:39 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,14 +62,19 @@ void	Account::displayAccountsInfos(void)
 
 void	Account::makeDeposit(int deposit)
 {
-	if (deposit < 0)
-		return ;
 	std::cout << "index:" << this->_accountIndex << ";";
-	std::cout << "amount" << deposit << ";";
-	this->_nbDeposits++;
-	Account::_totalNbDeposits++;
-	this->_amount += deposit;
-	Account::_totalAmount += deposit;
+	std::cout << "p_amount" << Account::checkAmount() << ";";
+	if (deposit < 0)
+		std::cout << "deposit:refused" << std::endl;
+	else
+	{
+		std::cout << "deposit:" << deposit << ";";
+		this->_amount += deposit;
+		std::cout << "amount:" << Account::checkAmount() << ";";
+		Account::_totalAmount += deposit;
+		this->_nbDeposits++;
+		Account::_totalNbDeposits++;
+	}
 }
 
 bool	Account::makeWithdrawal(int withdrawal)
