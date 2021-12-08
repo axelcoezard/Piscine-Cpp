@@ -6,19 +6,18 @@
 #    By: acoezard <acoezard@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/30 13:03:10 by acoezard          #+#    #+#              #
-#    Updated: 2021/12/08 14:42:47 by acoezard         ###   ########.fr        #
+#    Updated: 2021/12/08 14:44:30 by acoezard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			:=	phonebo
+NAME			:=	account
 
 SOURCES			:=	./
 INCLUDES		:=	./
 OBJECTS			:=	./bin
 
-SRCS			:=	main.cpp \
-					Contact.cpp \
-					Phonebook.cpp
+SRCS			:=	tests.cpp \
+					Account.cpp
 
 OBJS			:=	$(addprefix ${OBJECTS}/, $(SRCS:.cpp=.o))
 
