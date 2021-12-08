@@ -17,27 +17,31 @@ Contact::Contact(void) { }
 void	Contact::set_firstname(std::string firstname)
 { this->_firstname = firstname; }
 
+std::string	Contact::get_firstname(void)
+{ return (this->_firstname); }
+
 void	Contact::set_lastname(std::string lastname)
 { this->_lastname = lastname; }
+
+std::string	Contact::get_lastname(void)
+{ return (this->_lastname); }
 
 void	Contact::set_nickname(std::string nickname)
 { this->_nickname = nickname; }
 
+std::string	Contact::get_nickname(void)
+{ return (this->_nickname); }
+
 void	Contact::set_phone_number(std::string phone_number)
 { this->_phone_number = phone_number; }
+
+std::string	Contact::get_phone_number(void)
+{ return (this->_phone_number); }
 
 void	Contact::set_darkest_secret(std::string darkest_secret)
 { this->_darkest_secret = darkest_secret; }
 
-std::ostream&	operator<<(std::ostream& stream, const Contact& contact)
-{
-	std::cout << "firstname=" << contact->_firstname << std::endl;
-	std::cout << "lastname=" << contact->_lastname << std::endl;
-	std::cout << "nickname=" << contact->_nickname << std::endl;
-	std::cout << "phone_number=" << contact->_phone_number << std::endl;
-	std::cout << "darkest_secret=" << contact->_darkest_secret << std::endl;
-
-	return (stream);
-}
+std::string	Contact::get_darkest_secret(void)
+{ return (this->_darkest_secret); }
 
 Contact::~Contact(void) { }
