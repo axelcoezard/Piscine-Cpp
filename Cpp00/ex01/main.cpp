@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 13:54:21 by acoezard          #+#    #+#             */
-/*   Updated: 2021/12/08 14:32:40 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/12/08 18:06:15 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,11 +51,13 @@ static void	_add(Phonebook & phonebook)
 
 static void	_show(Contact * contact)
 {
+	std::cout << "=================================================\n";
 	std::cout << "firstname=" << contact->get_firstname() << std::endl;
 	std::cout << "lastname=" << contact->get_lastname() << std::endl;
 	std::cout << "nickname=" << contact->get_nickname() << std::endl;
 	std::cout << "phone_number=" << contact->get_phone_number() << std::endl;
 	std::cout << "darkest_secret=" << contact->get_darkest_secret() << std::endl;
+	std::cout << "=================================================\n";
 }
 
 static std::string	_trim(std::string s)
@@ -69,7 +71,7 @@ static void _search(Phonebook & phonebook)
 {
 	std::cout << "=================================================\n";
 	std::cout << "     index | first name |  last name |   nickname\n";
-	std::cout << "=================================================\n";
+	std::cout << "-------------------------------------------------\n";
 	if (phonebook.get_size() > 0)
 		for (int i = 0; i < 8; i++)
 		{
@@ -92,7 +94,7 @@ static void _search(Phonebook & phonebook)
 	std::cout << "phonebook: id=";
 	std::getline(std::cin, entry);
 	int id = atoi(entry.c_str());
-	if (id > 0 && id < 9)
+	if (id >=1 && id <= 8 && phonebook[id - 1])
 		_show(phonebook[id - 1]);
 }
 

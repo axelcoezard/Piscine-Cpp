@@ -3,6 +3,7 @@
 *.swo
 *.out
 *.o
+*.txt
 
 megaphone
 phonebook
