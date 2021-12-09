@@ -6,20 +6,17 @@
 #    By: acoezard <acoezard@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/30 13:03:10 by acoezard          #+#    #+#              #
-#    Updated: 2021/12/09 12:12:02 by acoezard         ###   ########.fr        #
+#    Updated: 2021/12/09 12:37:05 by acoezard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			:=	violence
+NAME			:=	replace
 
-SOURCES			:=	./sources
-INCLUDES		:=	./includes
+SOURCES			:=	./
+INCLUDES		:=	./
 OBJECTS			:=	./bin
 
-SRCS			:=	main.cpp \
-					Weapon.cpp \
-					HumanA.cpp \
-					HumanB.cpp
+SRCS			:=	main.cpp
 
 OBJS			:=	$(addprefix ${OBJECTS}/, $(SRCS:.cpp=.o))
 
