@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
+/*   Phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acoezard <acoezard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 14:42:00 by acoezard          #+#    #+#             */
-/*   Updated: 2021/12/08 14:29:00 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/12/09 17:36:56 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int		Phonebook::get_size(void)
 
 void	Phonebook::operator+=(Contact * contact)
 {
-	if (this->_size + 1 < this->_limit)
+	if (this->_size + 1 <= this->_limit)
 		this->_contacts[this->_size++] = contact;
 }
 
