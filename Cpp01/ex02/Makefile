@@ -6,19 +6,17 @@
 #    By: acoezard <acoezard@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/30 13:03:10 by acoezard          #+#    #+#              #
-#    Updated: 2021/12/09 10:59:11 by acoezard         ###   ########.fr        #
+#    Updated: 2021/12/09 11:03:26 by acoezard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			:=	horde
+NAME			:=	main
 
-SOURCES			:=	./sources
-INCLUDES		:=	./includes
+SOURCES			:=	./
+INCLUDES		:=	./
 OBJECTS			:=	./bin
 
-SRCS			:=	main.cpp \
-					Zombie.cpp \
-					ZombieHorde.cpp
+SRCS			:=	main.cpp
 
 OBJS			:=	$(addprefix ${OBJECTS}/, $(SRCS:.cpp=.o))
 
