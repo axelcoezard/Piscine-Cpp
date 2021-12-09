@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 12:51:52 by acoezard          #+#    #+#             */
-/*   Updated: 2021/12/09 14:16:18 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/12/09 14:50:38 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ class Replace
 {
 	private:
 		std::ifstream	_file;
+		std::ofstream	_out_file;
 		std::string		_filename;
 	public:
 		Replace(void);
