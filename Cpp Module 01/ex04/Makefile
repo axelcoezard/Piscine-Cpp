@@ -6,7 +6,7 @@
 #    By: acoezard <acoezard@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/30 13:03:10 by acoezard          #+#    #+#              #
-#    Updated: 2021/12/09 12:37:05 by acoezard         ###   ########.fr        #
+#    Updated: 2021/12/09 14:19:49 by acoezard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,8 @@ SOURCES			:=	./
 INCLUDES		:=	./
 OBJECTS			:=	./bin
 
-SRCS			:=	main.cpp
+SRCS			:=	main.cpp \
+					Replace.cpp
 
 OBJS			:=	$(addprefix ${OBJECTS}/, $(SRCS:.cpp=.o))
 

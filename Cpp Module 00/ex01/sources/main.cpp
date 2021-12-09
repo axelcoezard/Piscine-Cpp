@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 13:54:21 by acoezard          #+#    #+#             */
-/*   Updated: 2021/12/08 18:06:15 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/12/09 14:33:55 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,18 +31,23 @@ static void	_add(Phonebook & phonebook)
 	std::string	entry;
 	Contact	* contact = new Contact();
 
+	if (std::cin.eof()) return ;
 	std::cout << "phonebook: firstname=";
 	std::getline(std::cin, entry);
 	contact->set_firstname(entry);
+	if (std::cin.eof()) return ;
 	std::cout << "phonebook: lastname=";
 	std::getline(std::cin, entry);
 	contact->set_lastname(entry);
+	if (std::cin.eof()) return ;
 	std::cout << "phonebook: nickname=";
 	std::getline(std::cin, entry);
 	contact->set_nickname(entry);
+	if (std::cin.eof()) return ;
 	std::cout << "phonebook: phone_number=";
 	std::getline(std::cin, entry);
 	contact->set_phone_number(entry);
+	if (std::cin.eof()) return ;
 	std::cout << "phonebook: darkest_secret=";
 	std::getline(std::cin, entry);
 	contact->set_darkest_secret(entry);
@@ -104,7 +109,7 @@ int	main(void)
 	std::string	entry;
 
 	_begin();
-	while (42)
+	while (!std::cin.eof())
 	{
 		std::cout << "phonebook$ ";
 		std::getline(std::cin, entry);

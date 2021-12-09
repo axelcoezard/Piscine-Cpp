@@ -5,8 +5,5 @@
 *.o
 *.txt
 
-megaphone
-phonebook
-account
-
 bin/
+.vscode/
