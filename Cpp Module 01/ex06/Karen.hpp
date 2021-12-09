@@ -6,13 +6,19 @@
 /*   By: acoezard <acoezard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 15:12:14 by acoezard          #+#    #+#             */
-/*   Updated: 2021/12/09 17:40:48 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/12/09 17:56:18 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
+
+#define	NONE	0
+#define DEBUG	1
+#define	INFO	2
+#define WARNING	3
+#define ERROR	4
 
 class Karen
 {
