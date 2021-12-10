@@ -3,7 +3,6 @@
 *.swo
 *.out
 *.o
-*.txt
 
 bin/
 .vscode/
