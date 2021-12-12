@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 10:26:17 by acoezard          #+#    #+#             */
-/*   Updated: 2021/12/10 14:40:09 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/12/12 22:05:06 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,16 +47,16 @@ Fixed&	Fixed::operator=(const Fixed & copy)
 }
 
 Fixed	Fixed::operator+(const Fixed & n) const
-{ return (Fixed(this->_value + n.getRawBits())); }
+{ return (Fixed(this->toFloat() + n.toFloat())); }
 
 Fixed	Fixed::operator-(const Fixed & n) const
-{ return (Fixed(this->_value - n.getRawBits())); }
+{ return (Fixed(this->toFloat() - n.toFloat())); }
 
 Fixed	Fixed::operator*(const Fixed & n) const
-{ return (Fixed(this->toFloat() * n.toFloat())); }
+{ return (Fixed((float) this->toFloat() * (float) n.toFloat())); }
 
 Fixed	Fixed::operator/(const Fixed & n) const
-{ return (Fixed(this->toFloat() / n.toFloat())); }
+{ return (Fixed((float) this->toFloat() / (float) n.toFloat())); }
 
 bool	Fixed::operator>(const Fixed & n) const
 { return (this->_value > n.getRawBits()); }
@@ -112,7 +112,7 @@ int		Fixed::toInt(void) const
 { return (int) (this->_value >> this->_bits); }
 
 float	Fixed::toFloat(void) const
-{ return ((float) this->_value / (float) (1 << this->_bits)); }
+{ return ((float) this->_value / (1 << this->_bits)); }
 
 const Fixed&	Fixed::min(const Fixed & a, const Fixed & b)
 { return (a > b ? b : a); }

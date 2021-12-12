@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 10:26:17 by acoezard          #+#    #+#             */
-/*   Updated: 2021/12/10 17:04:27 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/12/12 22:03:38 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,10 @@ Fixed&	Fixed::operator=(const Fixed & copy)
 }
 
 Fixed	Fixed::operator+(const Fixed & n) const
-{ return (Fixed(this->_value + n.getRawBits())); }
+{ return (Fixed(this->toFloat() + n.toFloat())); }
 
 Fixed	Fixed::operator-(const Fixed & n) const
-{ return (Fixed(this->_value - n.getRawBits())); }
+{ return (Fixed(this->toFloat() - n.toFloat())); }
 
 Fixed	Fixed::operator*(const Fixed & n) const
 { return (Fixed((float) this->toFloat() * (float) n.toFloat())); }
@@ -107,7 +107,7 @@ int		Fixed::toInt(void) const
 { return (int) (this->_value >> this->_bits); }
 
 float	Fixed::toFloat(void) const
-{ return ((float) this->_value / (float) (1 << this->_bits)); }
+{ return ((float) this->_value / (1 << this->_bits)); }
 
 const Fixed&	Fixed::min(const Fixed & a, const Fixed & b)
 { return (a > b ? b : a); }

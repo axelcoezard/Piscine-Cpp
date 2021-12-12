@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 10:26:17 by acoezard          #+#    #+#             */
-/*   Updated: 2021/12/10 14:39:34 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/12/12 22:04:13 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int		Fixed::toInt(void) const
 { return (int) (this->_value >> this->_bits); }
 
 float	Fixed::toFloat(void) const
-{ return ((float) this->_value / (float) (1 << this->_bits)); }
+{ return ((float) this->_value / (1 << this->_bits)); }
 
 Fixed::~Fixed(void)
 { std::cout << "Destructor called" << std::endl; }
