@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 09:55:58 by acoezard          #+#    #+#             */
-/*   Updated: 2021/12/13 11:18:42 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/12/13 11:48:49 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ ScavTrap::ScavTrap(void)
 ScavTrap::ScavTrap(std::string name)
 {
 	this->setName(name);
-	this->setHitPoints(10);
-	this->setEnergyPoints(10);
-	this->setAttackDamage(0);
+	this->setHitPoints(100);
+	this->setEnergyPoints(50);
+	this->setAttackDamage(20);
 
 	std::cout << "ScavTrap default constructor called" << std::endl;
 }
