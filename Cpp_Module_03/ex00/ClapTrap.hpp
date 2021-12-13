@@ -6,9 +6,11 @@
 /*   By: acoezard <acoezard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 08:36:21 by acoezard          #+#    #+#             */
-/*   Updated: 2021/12/13 10:42:26 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/12/13 13:49:25 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#pragma once
 
 #include <iostream>
 
