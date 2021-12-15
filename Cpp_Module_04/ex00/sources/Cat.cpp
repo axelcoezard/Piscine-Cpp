@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 10:53:02 by acoezard          #+#    #+#             */
-/*   Updated: 2021/12/14 12:30:12 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/12/15 10:22:52 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Cat &	Cat::operator=(const Cat & copy)
 }
 
 void	Cat::makeSound(void) const
-{ std::cout << "**Cat does a cat sound**" << std::endl; }
+{ std::cout << "**Cat does a " << this->getType() << " sound**" << std::endl; }
 
 Cat::~Cat(void)
 { std::cout << "Cat destructor called" << std::endl; }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acoezard <acoezard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 10:20:51 by acoezard          #+#    #+#             */
-/*   Updated: 2021/12/14 11:07:36 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/12/15 11:03:21 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ class WrongAnimal
 		WrongAnimal&	operator=(const WrongAnimal & copy);
 		~WrongAnimal(void);
 
-		void	makeSound(void) const;
-
 		std::string	getType(void) const;
 		void		setType(std::string type);
+
+		void	makeSound(void) const;
 };

@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 10:58:00 by acoezard          #+#    #+#             */
-/*   Updated: 2021/12/14 14:00:22 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/12/15 11:33:18 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	main(void)
 
 	std::cout << "\n------ WRONG PART -------" << std::endl;
 	const WrongAnimal* wmeta = new WrongAnimal();
-	const WrongCat* wcat = new WrongCat();
+	const WrongAnimal* wcat = new WrongCat();
 
 	std::cout << wmeta->getType() << " " << std::endl;
 	std::cout << wcat->getType() << " " << std::endl;

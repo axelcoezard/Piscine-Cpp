@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 10:53:38 by acoezard          #+#    #+#             */
-/*   Updated: 2021/12/14 12:30:41 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/12/15 10:23:38 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Dog &	Dog::operator=(const Dog & copy)
 }
 
 void	Dog::makeSound(void) const
-{ std::cout << "**Dog does a dog sound**" << std::endl; }
+{ std::cout << "**Dog does a " << this->getType() << " sound**" << std::endl; }
 
 Dog::~Dog(void)
 { std::cout << "Dog destructor called" << std::endl; }

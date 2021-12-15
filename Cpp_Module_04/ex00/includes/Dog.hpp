@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 10:24:40 by acoezard          #+#    #+#             */
-/*   Updated: 2021/12/14 11:02:53 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/12/15 10:21:31 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,7 @@ class Dog : public Animal
 		Dog(void);
 		Dog(const Dog & copy);
 		Dog&	operator=(const Dog & copy);
-		~Dog(void);
+		virtual ~Dog(void);
 
-		void	makeSound(void) const;
+		virtual void	makeSound(void) const;
 };
-

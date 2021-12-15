@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 10:32:40 by acoezard          #+#    #+#             */
-/*   Updated: 2021/12/14 11:07:47 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/12/15 11:05:59 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 WrongAnimal::WrongAnimal(void)
 {
-	this->setType("WrongAnimal");
+	this->setType("Wrong Animal");
 	std::cout << "WrongAnimal default constructor called" << std::endl;
 }
 
@@ -35,7 +35,7 @@ WrongAnimal::~WrongAnimal(void)
 { std::cout << "WrongAnimal destructor called" << std::endl; }
 
 void	WrongAnimal::makeSound(void) const
-{ std::cout << "**WrongAnimal does a weird default sound**" << std::endl; }
+{ std::cout << "**WrongAnimal does a weird sound**" << std::endl; }
 
 std::string	WrongAnimal::getType(void) const
 { return (this->_type); }
