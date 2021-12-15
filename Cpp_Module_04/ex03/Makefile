@@ -5,6 +5,7 @@ INCLUDES		:=	./includes
 OBJECTS			:=	bin
 
 SRCS			:=	main.cpp \
+					MateriaSource.cpp \
 					AMateria.cpp \
 					Character.cpp \
 					Cure.cpp \
