@@ -6,33 +6,36 @@
 /*   By: acoezard <acoezard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 14:26:13 by acoezard          #+#    #+#             */
-/*   Updated: 2021/12/15 09:54:14 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/12/15 09:57:10 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "MateriaSource.hpp"
 #include "Character.hpp"
 #include "Cure.hpp"
 #include "Ice.hpp"
-#include "MateriaSource.hpp"
 
 int main(void)
 {
-	MateriaSource	*source = new MateriaSource();
-	Character	*axel = new Character("Axel");
+	IMateriaSource* src = new MateriaSource();
+	src->learnMateria(new Ice());
+	src->learnMateria(new Cure());
 
-	source->learnMateria(new Cure());
-	source->learnMateria(new Ice());
+	ICharacter* me = new Character("me");
 
-	axel->equip(source->createMateria("ice"));
-	axel->equip(source->createMateria("cure"));
-	axel->equip(source->createMateria("ice"));
+	AMateria* tmp;
+	tmp = src->createMateria("ice");
+	me->equip(tmp);
+	tmp = src->createMateria("cure");
+	me->equip(tmp);
 
-	axel->unequip(2);
+	ICharacter* bob = new Character("bob");
+	me->use(0, *bob);
+	me->use(1, *bob);
 
-	axel->use(0, *axel);
-	axel->use(1, *axel);
-	axel->use(2, *axel);
+	delete bob;
+	delete me;
+	delete src;
 
 	return (0);
 }
