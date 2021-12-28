@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42nice.f>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 12:55:51 by acoezard          #+#    #+#             */
-/*   Updated: 2021/12/21 10:15:52 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/12/21 11:54:15 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,16 +39,28 @@ Bureaucrat& Bureaucrat::operator=(const Bureaucrat & copy)
 Bureaucrat::~Bureaucrat(void)
 { }
 
-void Bureaucrat::upGrade(void)
+void	Bureaucrat::upGrade(void)
 {
 	if (this->_grade > 1)
 		this->_grade--;
 }
 
-void Bureaucrat::downGrade(void)
+void	Bureaucrat::downGrade(void)
 {
 	if (this->_grade < 150)
 		this->_grade++;
+}
+
+void	Bureaucrat::signForm(Form *form)
+{
+	form->beSigned(*this);
+	try {
+		if (form->isSigned())
+			std::cout << this->getName() << " signs " << form->getName() << "\n";
+	}
+	catch (Form::GradeTooLowException &e) {
+		std::cout << this->getName() << " cannot sign because " << e.what() << "\n";
+	}
 }
 
 std::string	Bureaucrat::getName(void) const
