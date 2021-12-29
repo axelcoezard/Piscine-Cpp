@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42nice.f>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 10:17:23 by acoezard          #+#    #+#             */
-/*   Updated: 2021/12/29 17:36:52 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/12/29 17:27:35 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ class Form
 		Form&			beSigned(Bureaucrat &author);
 		virtual void	execute(const Bureaucrat & executor) const = 0;
 		
+		virtual	Form	*clone(std::string target) const = 0;
+
 		std::string	getName(void) const;
 		int			getGradeToSign(void) const;
 		int			getGradeToExec(void) const;

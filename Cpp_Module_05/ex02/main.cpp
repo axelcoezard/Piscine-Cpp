@@ -6,42 +6,52 @@
 /*   By: acoezard <acoezard@student.42nice.f>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 14:34:22 by acoezard          #+#    #+#             */
-/*   Updated: 2021/12/21 12:16:05 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/12/29 16:54:54 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
 int main(void)
 {
-	Bureaucrat *A = new Bureaucrat("Axel", 20);
+	Bureaucrat *A = new Bureaucrat("Axel", 1);
 	std::cout << A << std::endl;
 	
-	Bureaucrat *M = new Bureaucrat("Marie", 40);
-	std::cout << M << std::endl;
-
 	try {
-		Form *formA = new Form("Adhesion-1", 30, 20);
-		std::cout << formA << std::endl;
+		Form *formS = new ShrubberyCreationForm("maison");
+		Form *formR = new RobotomyRequestForm("Mathias");
+		Form *formP = new PresidentialPardonForm("Mathias");
+		std::cout << formS << std::endl;
+		std::cout << formR << std::endl;
+		std::cout << formP << std::endl;
 
-		A->signForm(formA);
-		std::cout << formA << std::endl;
-		delete formA;
+		A->signForm(formS);
+		A->executeForm(*formS);
 
-		Form *formM = new Form("Adhesion-2", 30, 20);
-		std::cout << formM << std::endl;
+		A->signForm(formR);
+		A->executeForm(*formR);
 
-		M->signForm(formM);
-		std::cout << formM << std::endl;
-		delete formM;
+		A->signForm(formP);
+		A->executeForm(*formP);
+
+		std::cout << formS << std::endl;
+		std::cout << formR << std::endl;
+		std::cout << formP << std::endl;
+		delete formS;
 	} catch (Form::GradeTooLowException &e) {
+		std::cout << "Error: " << e.what() << std::endl;	
+	} catch (Form::NotSignedException &e) {
+		std::cout << "Error: " << e.what() << std::endl;	
+	} catch (Form::GradeTooHighException &e) {
 		std::cout << "Error: " << e.what() << std::endl;	
 	}
 	
 	delete A;
-	delete M;
 	
 	return (0);
 }
