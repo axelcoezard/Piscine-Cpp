@@ -6,13 +6,14 @@
 /*   By: acoezard <acoezard@student.42nice.f>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/30 13:22:43 by acoezard          #+#    #+#             */
-/*   Updated: 2021/12/30 17:57:05 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/12/31 13:24:09 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <Array.hpp>
 
-#define MAX_VAL 750
+#define MAX_VAL 50
+
 int main(int, char**)
 {
     Array<int> numbers(MAX_VAL);
@@ -44,7 +45,7 @@ int main(int, char**)
     }
     catch(const std::exception& e)
     {
-        std::cerr << e.what() << '\n';
+        std::cerr << "NEGATIVE : " << e.what() << '\n';
     }
     try
     {
@@ -52,12 +53,12 @@ int main(int, char**)
     }
     catch(const std::exception& e)
     {
-        std::cerr << e.what() << '\n';
+        std::cerr << "MAX_VAL : " << e.what() << '\n';
     }
 
     for (int i = 0; i < MAX_VAL; i++)
     {
-        numbers[i] = rand();
+        std::cout << "N[" << i << "]=" << numbers[i] << "\n";
     }
     delete [] mirror;//
     return 0;
