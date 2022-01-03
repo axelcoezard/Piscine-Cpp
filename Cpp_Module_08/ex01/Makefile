@@ -4,7 +4,8 @@ SOURCES			:=	./
 INCLUDES		:=	./
 OBJECTS			:=	bin
 
-SRCS			:=	main.cpp
+SRCS			:=	main.cpp \
+					span.cpp
 
 OBJS			:=	$(addprefix ${OBJECTS}/, $(SRCS:.cpp=.o))
 
