@@ -1,21 +1,15 @@
-NAME			:=	intern
+NAME			:=	ex01
 
 SOURCES			:=	./
 INCLUDES		:=	./
 OBJECTS			:=	bin
 
-SRCS			:=	main.cpp \
-					Bureaucrat.cpp \
-					Form.cpp \
-					ShrubberyCreationForm.cpp \
-					RobotomyRequestForm.cpp \
-					PresidentialPardonForm.cpp \
-					Intern.cpp
+SRCS			:=	main.cpp
 
 OBJS			:=	$(addprefix ${OBJECTS}/, $(SRCS:.cpp=.o))
 
 CC				:=	clang++
-CFLAGS			:=	-Wall -Wextra -Werror -fsanitize=address
+CFLAGS			:=	-Wall -Wextra -Werror
 CINCLUDES		:=	-I ${INCLUDES}
 
 GREEN			:=	"\033[1;32m"
